@@ -1,28 +1,24 @@
-import java.util.Scanner; // For getting user input
+import java.util.Scanner;
 
 public class FirstClass {
 
     public static void main (String [] args) {
 
-        System.out.println("Enter your age: ");
+        // Constructor object
+        SecondClass s = new SecondClass("Jack", "McCabe");
+
+
+        SecondClass.setFavouriteColour("Red"); // setting attribute values
+        SecondClass.setFavouriteNum(6); // Setting values attribute
+        System.out.println(SecondClass.FavouriteColour);
+        System.out.println(SecondClass.FavouriteNum);
+
+        //System.out.println("First class");
+
         Scanner ans = new Scanner(System.in);
         int UserAns = ans.nextInt();
 
 
 
-        try {
-            if (UserAns < 20) {
-                System.out.println("You are young");
-            }
-            else if(UserAns > 20 && UserAns < 55) {
-                System.out.println("Your are middle aged");
-            }
-            else {
-                System.out.println("You ARE Elderly");
-            }
-        }
-        catch (Exception e) {
-            System.out.println("Error");
-        }
     } // method end
 } // class end
