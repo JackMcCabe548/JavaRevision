@@ -5,7 +5,8 @@ public class FirstClass {
     public static void main (String [] args) {
 
         Scanner ans = new Scanner(System.in);
-        int UserAns = ans.nextByte();
+        int UserAns = ans.nextInt();
+
         System.out.println("Enter your age");
 
         try {
