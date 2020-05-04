@@ -4,10 +4,11 @@ public class FirstClass {
 
     public static void main (String [] args) {
 
+        System.out.println("Enter your age: ");
         Scanner ans = new Scanner(System.in);
         int UserAns = ans.nextInt();
 
-        System.out.println("Enter your age");
+
 
         try {
             if (UserAns < 20) {
