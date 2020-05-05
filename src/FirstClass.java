@@ -4,18 +4,24 @@ public class FirstClass {
 
     public static void main (String [] args) {
 
-// slow instantiating objects
-        SecondClass s = new SecondClass();
-        s.setFavouriteColour("Purple"); // setting attribute values
-        s.setFavouriteNum(2); // Setting values attribute
-        System.out.println(s.FavouriteColour);
-        System.out.println(s.FavouriteNum);
+// SecondClass code
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter a num");
+        int value = scan.nextInt();
+        SecondClass s = new SecondClass(); // create object
+        s.setFavouriteNum(value);
+        int setFavouriteNum = s.getFavouriteNum();
+        System.out.println(setFavouriteNum);
 
+// ThirdClass code
 // Fast Constructor instantiating objects
-        ThirdClass FT = new ThirdClass('L');
-        System.out.println(FT.JackSize);
+        System.out.print("Newton Raphson answer is: ");
+        ThirdClass F = new ThirdClass( "newton" , 10 ); // Object with 2 arguments
 
-        ThirdClass F = new ThirdClass( "newton" , 600 ); // Object with 2 arguments
+
+//Fourth class code
+// Understanding Getters and Setters
+
 
     }
 }

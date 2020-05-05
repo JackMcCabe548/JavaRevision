@@ -1,14 +1,22 @@
-public class SecondClass { // Inefficent class
+public class SecondClass { // Getters and setters
 
-    public static String FavouriteColour;
-    public static int FavouriteNum;
+    private static int FavouriteNum;
 
-        // Methods
-        public static void setFavouriteColour(String newColour){
-            FavouriteColour = newColour;
+        public static void setFavouriteNum (int newNum) { // Setter method
+            if( newNum < 10){
+                FavouriteNum = newNum; // assigns private var to argument
             }
-        public static void setFavouriteNum (int newNum) {
-            FavouriteNum = newNum;
+            else {
+                System.out.println("Error");
+                FavouriteNum = newNum; // assigns private var to argument
+                System.out.print("Default value is:");
+                FavouriteNum = 5; // Default value if criteria not met
             }
+
+        }
+
+        public static int getFavouriteNum() { // Getter method
+            return FavouriteNum;
+        }
 
 } // end of class
