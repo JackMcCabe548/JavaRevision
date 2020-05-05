@@ -4,21 +4,18 @@ public class FirstClass {
 
     public static void main (String [] args) {
 
-        // Constructor object
-        SecondClass s = new SecondClass("Jack", "McCabe");
+// slow instantiating objects
+        SecondClass s = new SecondClass();
 
+        s.setFavouriteColour("Purple"); // setting attribute values
+        s.setFavouriteNum(2); // Setting values attribute
+        System.out.println(s.FavouriteColour);
+        System.out.println(s.FavouriteNum);
 
-        SecondClass.setFavouriteColour("Red"); // setting attribute values
-        SecondClass.setFavouriteNum(6); // Setting values attribute
-        System.out.println(SecondClass.FavouriteColour);
-        System.out.println(SecondClass.FavouriteNum);
+// Fast Constructor instantiating objects
+        ThirdClass T = new ThirdClass("Jack", 'L'); // Assign values
+        System.out.println("Name" + "\t" + "Clothing"); // Making a table
+        System.out.println(T.FirstName + "\t" + T.Size); // Call variables
 
-        //System.out.println("First class");
-
-        Scanner ans = new Scanner(System.in);
-        int UserAns = ans.nextInt();
-
-
-
-    } // method end
-} // class end
+    }
+}
