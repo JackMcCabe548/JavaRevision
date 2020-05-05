@@ -1,8 +1,14 @@
 public class SecondClass {
 
-    String caller () {
-        System.out.println("Second class");
+    public static String FavouriteColour;
+    public static int FavouriteNum;
 
-        return null;
-    }
-}
+        // Methods
+        public static void setFavouriteColour(String newColour){
+            FavouriteColour = newColour;
+            }
+        public static void setFavouriteNum (int newNum) {
+            FavouriteNum = newNum;
+            }
+
+} // end of class

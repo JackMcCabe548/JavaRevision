@@ -1,28 +1,21 @@
-import java.util.Scanner; // For getting user input
+import java.util.Scanner;
 
 public class FirstClass {
 
     public static void main (String [] args) {
 
-        System.out.println("Enter your age: ");
-        Scanner ans = new Scanner(System.in);
-        int UserAns = ans.nextInt();
+// slow instantiating objects
+        SecondClass s = new SecondClass();
 
+        s.setFavouriteColour("Purple"); // setting attribute values
+        s.setFavouriteNum(2); // Setting values attribute
+        System.out.println(s.FavouriteColour);
+        System.out.println(s.FavouriteNum);
 
+// Fast Constructor instantiating objects
+        ThirdClass T = new ThirdClass("Jack", 'L'); // Assign values
+        System.out.println("Name" + "\t" + "Clothing"); // Making a table
+        System.out.println(T.FirstName + "\t" + T.Size); // Call variables
 
-        try {
-            if (UserAns < 20) {
-                System.out.println("You are young");
-            }
-            else if(UserAns > 20 && UserAns < 55) {
-                System.out.println("Your are middle aged");
-            }
-            else {
-                System.out.println("You ARE Elderly");
-            }
-        }
-        catch (Exception e) {
-            System.out.println("Error");
-        }
-    } // method end
-} // class end
+    }
+}
