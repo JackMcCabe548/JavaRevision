@@ -1,4 +1,4 @@
-public class SecondClass {
+public class SecondClass { // Inefficent class
 
     public static String FavouriteColour;
     public static int FavouriteNum;
