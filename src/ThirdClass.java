@@ -27,7 +27,7 @@ public class ThirdClass { //Class
                     break;
                 }
             } // End of do statement
-            while (FinalAns.equals ("newton") || FinalAns.equals("bisection") && Numberinput > 0 && Numberinput <= 100); // While correct inputs are entered the do loops
+            while (FinalAns.equals ("newton") || FinalAns.equals("bisection") && Numberinput > 0 && Numberinput <= 10); // While correct inputs are entered the do loops
         }
         catch (Exception e) { // code prevents typing in the wrong primitives
             System.out.println(" Error type: " + e);

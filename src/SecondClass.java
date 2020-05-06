@@ -1,22 +1,48 @@
 public class SecondClass { // Getters and setters
 
-    private static int FavouriteNum;
+    private String Name;
+    private double Sweetness;
 
-        public static void setFavouriteNum (int newNum) { // Setter method
-            if( newNum < 10){
-                FavouriteNum = newNum; // assigns private var to argument
-            }
-            else {
-                System.out.println("Error");
-                FavouriteNum = newNum; // assigns private var to argument
-                System.out.print("Default value is:");
-                FavouriteNum = 5; // Default value if criteria not met
-            }
+    SecondClass (String NewName, double NewSweetness) { // CONSTRUCTOR METHOD
+        Name = NewName;
+        Sweetness= NewSweetness;
 
+        // Maps variables to setters
+        setName(NewName);
+        setSweetness(NewSweetness);
+    }
+
+    public void setName(String name) { // SETTER
+        Name = name;
+    }
+
+    public void setSweetness(double sweetness) { // SETTER
+        Sweetness = sweetness;
+
+        if (sweetness < 5) {
+            System.out.println("Trash tier sweet");
+        }
+        else if (sweetness > 5 && sweetness < 10){
+            System.out.println("Decent sweet tbh");
+        }
+        else {
+            System.out.println("sweet error");
+            Sweetness = 0.0;
         }
 
-        public static int getFavouriteNum() { // Getter method
-            return FavouriteNum;
-        }
+    }
+
+    public String getName() { // GETTER
+        return Name;
+    }
+
+    public double getSweetness() { // GETTER
+        return Sweetness;
+    }
+
+    public void PrinterMethod () {
+        System.out.println( "The sweet: " + getName() + "Is rated " + getSweetness() );
+
+    }
 
 } // end of class
