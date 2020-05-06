@@ -2,48 +2,36 @@ import java.util.Scanner;
 
 public class FifthClass {
 
-    private double input;
-    private double total;
-    private int i;
+    private String Name;
+    private int Weight;
 
-    public void apple (){ // METHOD
-
-        try {
-            for (i = 0; i < 5; i++) {
-                    System.out.println("Enter a value");
-                    Scanner scan = new Scanner(System.in);
-                    total = scan.nextInt();
-                    total =+ input;
-            }
-                    System.out.println(total / i);
-        }
-        catch(Exception e){
-                    System.out.println(e);
-        }
-
-            setTotal(total);
-            setInput(input);
+    FifthClass(String NewName, int NewWeight){
+        Name = NewName;
+        Weight = NewWeight;
+        setName(NewName);
+        setWeight(NewWeight);
+        System.out.println(this);
     }
 
-    public void setTotal(double NewTotal) {
-        total = NewTotal;
+    public String getName() {
+        return Name;
     }
 
-    public double getTotal() {
-        return total;
+    public int getWeight() {
+        return Weight;
     }
 
-    public void setInput(double NewInput) {
-        input = NewInput;
-        }
-
-    public double getInput() {
-        return input;
+    public void setName(String name) {
+        Name = name;
     }
 
-    public void getting (){
-        System.out.println(getTotal());
+    public void setWeight(int weight) {
+        Weight = weight;
     }
 
+    public String toString(){
+        System.out.println("Your data shows name: " + getName() + " Weight: " + getWeight());
+        return null;
+    }
 
 }

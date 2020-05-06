@@ -1,38 +1,26 @@
 public class ThirdClass { //Class
 
-    // Vairables for second constructor
-    private static String FinalAns;
-    private static int Numberinput;
+    private String Fruit;
 
-     ThirdClass(String NewFinalAns, int NewInput) { // Constructor class with two arguments
+    public ThirdClass (String Carrot) { // One argument constructor
 
-        try { // Attempts to execute code unless errors occur
+        setFruit(Carrot); // ASSIGNS VALUE TO FRUIT VAR
+        System.out.println(this); // Calls toString method which class getter
+    }
 
-            FinalAns = NewFinalAns;
-            Numberinput = NewInput;
+    public String getFruit() {
+        return Fruit;
+    }
 
-            do { // Executes code while parameter is true
-                if (FinalAns.equals("newton") ) {
-                    Numberinput = Numberinput * 2;
-                    System.out.println(Numberinput);
-                    break;
+    public void setFruit(String NewFruit) {
+        Fruit = NewFruit;
+    }
 
-                } else if (FinalAns.equals("bisection") ) {
-                    Numberinput = Numberinput * 4;
-                    System.out.println(Numberinput);
-                    break;
+    public String toString() {
 
-                } else {
-                    System.out.println("Error");
-                    break;
-                }
-            } // End of do statement
-            while (FinalAns.equals ("newton") || FinalAns.equals("bisection") && Numberinput > 0 && Numberinput <= 10); // While correct inputs are entered the do loops
-        }
-        catch (Exception e) { // code prevents typing in the wrong primitives
-            System.out.println(" Error type: " + e);
-        }
+        System.out.println("The veg is " + getFruit());
 
-    } // end of method
+        return null;
+    }
 
 } // end of class

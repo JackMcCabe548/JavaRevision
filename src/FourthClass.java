@@ -10,6 +10,7 @@ public class FourthClass { // TEST VERSION OF THIRDCLASS WITH GETTERS / SETTERS
         // Puts constructor inputs through setters
         setNumberinput(NewInput);
         setFinalAns(NewFinalAns);
+        System.out.println(this);
     }
 
     public static void setNumberinput(int numberinput) { // SETTER
@@ -55,8 +56,9 @@ public class FourthClass { // TEST VERSION OF THIRDCLASS WITH GETTERS / SETTERS
         return NumberInput;
     }
 
-    public void out (){
+    public String toString (){
         System.out.println( "The output is: " + getNumberinput() + " Using method: " + getFinalAns());
+        return null;
     }
 
 }

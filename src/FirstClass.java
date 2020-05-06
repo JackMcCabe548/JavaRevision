@@ -6,22 +6,12 @@ public class FirstClass {
 
 // SecondClass code
         SecondClass s = new SecondClass(" Bounty " ,  7.2 ); // create object
-        s.PrinterMethod();
-
 // ThirdClass code
-// Fast Constructor instantiating objects
-        System.out.print("Newton Raphson answer is: ");
-        ThirdClass F = new ThirdClass( "newton" , 69 ); // Object with 2 arguments
-
+        ThirdClass J = new ThirdClass("Broccoli");
 //Fourth class code
-        FourthClass K = new FourthClass( "newton" , 6);
-        K.out();
-
+        FourthClass K = new FourthClass( "newton" , 1);
 //FifthClass
-        FifthClass BB = new FifthClass();
-        BB.apple();
-
-
-
+        FifthClass G = new FifthClass("Anisah", 85);
     }
+
 }

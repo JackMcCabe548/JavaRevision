@@ -1,7 +1,16 @@
+import java.util.Scanner;
+
 public class SecondClass { // Getters and setters
 
+    // Average calculator
+    private double input;
+    private double total;
+    private int i;
+
+    // Sweetness calculator //
     private String Name;
     private double Sweetness;
+
 
     SecondClass (String NewName, double NewSweetness) { // CONSTRUCTOR METHOD
         Name = NewName;
@@ -10,6 +19,8 @@ public class SecondClass { // Getters and setters
         // Maps variables to setters
         setName(NewName);
         setSweetness(NewSweetness);
+
+        System.out.println(this); // calls the method called toString from constructor which class the GETTER methods
     }
 
     public void setName(String name) { // SETTER
@@ -40,9 +51,10 @@ public class SecondClass { // Getters and setters
         return Sweetness;
     }
 
-    public void PrinterMethod () {
+    public String toString() { // toString method
         System.out.println( "The sweet: " + getName() + "Is rated " + getSweetness() );
 
+        return null;
     }
 
 } // end of class
