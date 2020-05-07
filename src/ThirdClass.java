@@ -1,26 +1,30 @@
-public class ThirdClass { //Class
 
-    private String Fruit;
+public class ThirdClass extends FirstClass { //Class
 
-    public ThirdClass (String Carrot) { // One argument constructor
+    private int Y [];
 
-        setFruit(Carrot); // ASSIGNS VALUE TO FRUIT VAR
-        System.out.println(this); // Calls toString method which class getter
+    ThirdClass(int NEWY[]){
+        Y = NEWY;
+        setY(NEWY);
+        //System.out.println(this);
     }
 
-    public String getFruit() {
-        return Fruit;
+    //public int[] getY() {
+    //    return Y;
+    //}
+
+    public void setY(int[] NEWY) {
+        Y = NEWY;
+        for (int i = 0 ; i < NEWY.length; i++){
+            NEWY[i] = NEWY[i]+ 10;
+        }
+        for (int J = 0; J < Y.length; J++){
+            System.out.println(Y[J]);
+        }
     }
 
-    public void setFruit(String NewFruit) {
-        Fruit = NewFruit;
-    }
-
-    public String toString() {
-
-        System.out.println("The veg is " + getFruit());
-
-        return null;
-    }
-
-} // end of class
+    //public String toString(){
+    //    System.out.println(getY());
+     //   return null;
+    //}
+}
