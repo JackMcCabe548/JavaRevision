@@ -1,30 +1,60 @@
+import java.util.Arrays;
 
-public class ThirdClass extends FirstClass { //Class
+public class ThirdClass { //Class
 
-    private int Y [];
+    private static String FinalAns;
+    private static int NumberInput;
 
-    ThirdClass(int NEWY[]){
-        Y = NEWY;
-        setY(NEWY);
-        //System.out.println(this);
+    ThirdClass(String NewFinalAns, int NewInput) { // Constructor class with two arguments
+
+        // Puts constructor inputs through setters
+        setNumberinput(NewInput);
+        setFinalAns(NewFinalAns);
+        System.out.println(this);
     }
 
-    //public int[] getY() {
-    //    return Y;
-    //}
+    public static void setNumberinput(int NewInput) { // SETTER
 
-    public void setY(int[] NEWY) {
-        Y = NEWY;
-        for (int i = 0 ; i < NEWY.length; i++){
-            NEWY[i] = NEWY[i]+ 10;
+
+        if (NumberInput > 0 && NumberInput <= 100) {
+            NumberInput = NewInput;
         }
-        for (int J = 0; J < Y.length; J++){
-            System.out.println(Y[J]);
+        else {
+            NumberInput = 9;
         }
     }
+    public static void setFinalAns(String NewFinalAns) { // SETTER
+        FinalAns = NewFinalAns;
+        if (NewFinalAns.equals ("a") || FinalAns.equals("b")) {
 
-    //public String toString(){
-    //    System.out.println(getY());
-     //   return null;
-    //}
+            // NESTED IF STATEMENT
+            if (NewFinalAns.equals("a") ) {
+                NumberInput = NumberInput * 2;
+            }
+            else if (NewFinalAns.equals("b") ) {
+                //FinalAns = NewFinalAns;
+                NumberInput = NumberInput * 4;
+            } else {
+                System.out.println("Error");
+                NumberInput = 0;
+            }
+        }
+        else {
+            //FinalAns = NewFinalAns;
+            FinalAns.equals ("bisection");
+            NumberInput = NumberInput * 4;
+        }
+    }
+    public static String getFinalAns() { // GETTER
+        return FinalAns;
+    }
+    public static int getNumberinput() { // GETTER
+        return NumberInput;
+    }
+
+    public String toString (){ // called by this keyword
+        System.out.println( "The output is: " + getNumberinput() + " Using method: " + getFinalAns());
+        return null;
+    }
+
 }

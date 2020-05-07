@@ -1,18 +1,17 @@
 
 public class FirstClass {
 
-    static int Grocery [] = {1,1}; // Array of length 10
+    static int [] Grocery  = {10, 10, 10, 10}; // Array of length 2
 
     public static void main (String [] args) {
-
 // SecondClass code
-        //SecondClass s = new SecondClass(" Bounty " ,  7.2 ); // create object
+        SecondClass s = new SecondClass(Grocery ); // create object which calls constructor with array argument
 // ThirdClass code
-        ThirdClass J = new ThirdClass(Grocery);
+        ThirdClass b = new ThirdClass("a", 3000); // Create object which calls constructor with 2 arguments
 //Fourth class code
-        //FourthClass K = new FourthClass( "newton" , 1);
+
 //FifthClass
-        //FifthClass G = new FifthClass("Anisah", 85);
+    FifthClass Z =  new FifthClass(7);
     }
 
 }

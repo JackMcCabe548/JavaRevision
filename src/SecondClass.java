@@ -1,59 +1,35 @@
+import java.util.Arrays;
 import java.util.Scanner;
-
+// Array adding class //
 public class SecondClass { // Getters and setters
 
-    // Average calculator
-    private double input;
-    private double total;
-    private int i;
+    private int [] Y ;
 
-    // Sweetness calculator //
-    private String Name;
-    private double Sweetness;
-
-
-    SecondClass (String NewName, double NewSweetness) { // CONSTRUCTOR METHOD
-        Name = NewName;
-        Sweetness= NewSweetness;
-
-        // Maps variables to setters
-        setName(NewName);
-        setSweetness(NewSweetness);
-
-        System.out.println(this); // calls the method called toString from constructor which class the GETTER methods
+    SecondClass(int [] NEWY){ // Constructor with array argument
+        //Y = NEWY;
+        setY(NEWY); // Assigns array to SETTER method
+        System.out.println(this); // Calls to string method
     }
 
-    public void setName(String name) { // SETTER
-        Name = name;
-    }
+    public int[] getY() { // GETTER
+        System.out.println(Arrays.toString(Y)); // When called outputs the string
+        return Y;
+    } // end of method
 
-    public void setSweetness(double sweetness) { // SETTER
-        Sweetness = sweetness;
-
-        if (sweetness < 5) {
-            System.out.println("Trash tier sweet");
+    public void setY(int [] NEWY) { // SETTER
+        Y = NEWY;
+        try {
+            for (int i = 0; i < NEWY.length; i++) {
+                NEWY[i] = NEWY[i] + 10;
+            }
         }
-        else if (sweetness > 5 && sweetness < 10){
-            System.out.println("Decent sweet tbh");
+        catch(Exception e){
+            System.out.println(e);
         }
-        else {
-            System.out.println("sweet error");
-            Sweetness = 0.0;
-        }
+    } // end of method
 
-    }
-
-    public String getName() { // GETTER
-        return Name;
-    }
-
-    public double getSweetness() { // GETTER
-        return Sweetness;
-    }
-
-    public String toString() { // toString method
-        System.out.println( "The sweet: " + getName() + "Is rated " + getSweetness() );
-
+    public String toString(){
+        getY();
         return null;
     }
 
