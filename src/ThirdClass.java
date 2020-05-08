@@ -1,50 +1,44 @@
-import java.util.Arrays;
 
 public class ThirdClass { //Class
 
     private static String FinalAns;
     private static int NumberInput;
 
+    private enum values { // Check input to Enumeration values
+        newton, bisection
+    }
+
     ThirdClass(String NewFinalAns, int NewInput) { // Constructor class with two arguments
 
         // Puts constructor inputs through setters
-        setNumberinput(NewInput);
-        setFinalAns(NewFinalAns);
-        System.out.println(this);
+        setNumberinput(NewInput); // uses constructor value for setter
+        setFinalAns(NewFinalAns); // uses constructor value for setter
+        System.out.println(this); // calls toString method
     }
 
     public static void setNumberinput(int NewInput) { // SETTER
-
-
-        if (NumberInput > 0 && NumberInput <= 100) {
+        if (NewInput > 0 && NewInput <= 100) {
             NumberInput = NewInput;
         }
-        else {
-            NumberInput = 9;
+        else if (NewInput > 100){
+            NumberInput = NewInput;
+            NumberInput = 5;
         }
     }
+
     public static void setFinalAns(String NewFinalAns) { // SETTER
         FinalAns = NewFinalAns;
-        if (NewFinalAns.equals ("a") || FinalAns.equals("b")) {
-
-            // NESTED IF STATEMENT
-            if (NewFinalAns.equals("a") ) {
-                NumberInput = NumberInput * 2;
-            }
-            else if (NewFinalAns.equals("b") ) {
-                //FinalAns = NewFinalAns;
-                NumberInput = NumberInput * 4;
-            } else {
-                System.out.println("Error");
-                NumberInput = 0;
-            }
-        }
-        else {
-            //FinalAns = NewFinalAns;
-            FinalAns.equals ("bisection");
-            NumberInput = NumberInput * 4;
-        }
+        values v = values.valueOf(NewFinalAns); // uses constructor input which is checked by enumeration
+            switch (v) { // switch/ case statement for checking constructor value
+                case newton:
+                    NumberInput = NumberInput * 2;
+                    break;
+                case bisection:
+                    NumberInput = NumberInput * 4;
+                    break;
+                }
     }
+
     public static String getFinalAns() { // GETTER
         return FinalAns;
     }

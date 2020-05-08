@@ -6,7 +6,6 @@ public class SecondClass { // Getters and setters
     private int [] Y ;
 
     SecondClass(int [] NEWY){ // Constructor with array argument
-        //Y = NEWY;
         setY(NEWY); // Assigns array to SETTER method
         System.out.println(this); // Calls to string method
     }
