@@ -1,26 +1,54 @@
+
 public class ThirdClass { //Class
 
-    private String Fruit;
+    private static String FinalAns;
+    private static int NumberInput;
 
-    public ThirdClass (String Carrot) { // One argument constructor
-
-        setFruit(Carrot); // ASSIGNS VALUE TO FRUIT VAR
-        System.out.println(this); // Calls toString method which class getter
+    private enum values { // Check input to Enumeration values
+        newton, bisection
     }
 
-    public String getFruit() {
-        return Fruit;
+    ThirdClass(String NewFinalAns, int NewInput) { // Constructor class with two arguments
+
+        // Puts constructor inputs through setters
+        setNumberinput(NewInput); // uses constructor value for setter
+        setFinalAns(NewFinalAns); // uses constructor value for setter
+        System.out.println(this); // calls toString method
     }
 
-    public void setFruit(String NewFruit) {
-        Fruit = NewFruit;
+    public static void setNumberinput(int NewInput) { // SETTER
+        if (NewInput > 0 && NewInput <= 100) {
+            NumberInput = NewInput;
+        }
+        else if (NewInput > 100){
+            NumberInput = NewInput;
+            NumberInput = 5;
+        }
     }
 
-    public String toString() {
+    public static void setFinalAns(String NewFinalAns) { // SETTER
+        FinalAns = NewFinalAns;
+        values v = values.valueOf(NewFinalAns); // uses constructor input which is checked by enumeration
+            switch (v) { // switch/ case statement for checking constructor value
+                case newton:
+                    NumberInput = NumberInput * 2;
+                    break;
+                case bisection:
+                    NumberInput = NumberInput * 4;
+                    break;
+                }
+    }
 
-        System.out.println("The veg is " + getFruit());
+    public static String getFinalAns() { // GETTER
+        return FinalAns;
+    }
+    public static int getNumberinput() { // GETTER
+        return NumberInput;
+    }
 
+    public String toString (){ // called by this keyword
+        System.out.println( "The output is: " + getNumberinput() + " Using method: " + getFinalAns());
         return null;
     }
 
-} // end of class
+}
