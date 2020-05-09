@@ -16,6 +16,7 @@ public class FirstClass {
     F.Logic();
 
 //SixthClass code
+    SixClass ICE = new SixClass();
 
 
     }
