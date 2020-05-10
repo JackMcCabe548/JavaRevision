@@ -2,57 +2,43 @@ import java.util.Scanner;
 
 public class SixClass {
 
-    private enum ICECREAM { // ENUMERATION
-        VANILLA, STRAWBERRY, CHOCOLATE, SALTEDCARAMEL, MINT, TOFFEE
-    }
+    private enum ICECREAM { // ENUMERATION ACTS AS A CLASS
+        VANILLA("Just like sex" , " £1.00 "),
+        STRAWBERRY("Its healthy because its a fruit", " £0.90 "),
+        CHOCOLATE("Kit kat", " £1.20 "),
+        SALTEDCARAMEL("Basic like oreo ice cream", " £1.40 ");
 
-    private String Flavour;
+        private final String Flavour;
+        private final String Desc;
 
-    public SixClass(){ // METHOD
-
-        System.out.println("Enter a flavour: ");
-        Scanner scan = new Scanner(System.in);
-        String answer = scan.nextLine();
-        Flavour = answer;
-        System.out.println("The flavours available are " + java.util.Arrays.asList(SixClass.ICECREAM.values()) ); // Prints enumeration values
-        setFlavour(answer); // Sets constructor value to user input
-        System.out.println(this); // calls toString method
-    }
-
-    public String getFlavour() { // GETTER
-        return Flavour;
-    }
-
-    public void setFlavour(String NewFlavour) { // SETTER
-        Flavour = NewFlavour;
-
-        ICECREAM i = ICECREAM.valueOf(NewFlavour); // Creates object with value user enters
-
-        switch (i) {
-            case MINT:
-                System.out.println("You minty boi");
-                break;
-            case TOFFEE:
-                System.out.println("Toffee is noice");
-                break;
-            case VANILLA:
-                System.out.println("Just like sex");
-                break;
-            case CHOCOLATE:
-                System.out.println("Kit kat");
-                break;
-            case SALTEDCARAMEL:
-                System.out.println("Basic like oreo ice cream");
-                break;
-            case STRAWBERRY:
-                System.out.println("Its healthy because its a fruit");
-                break;
-            }
+        ICECREAM(String NewFlavour, String Description){
+            Flavour = NewFlavour;
+            Desc = Description;
         }
 
-    public String toString(){
-        System.out.println("Flavour chosen is " + getFlavour());
-        return null;
+        public String getFlavour() {
+            return Flavour;
+        }
+
+        public String getDesc() {
+            return Desc;
+        }
     }
+
+    public SixClass (String OUT){ // CONSTRUCTOR
+
+        //System.out.println("Enter a flavour");
+        //Scanner scan = new Scanner(System.in);
+        //String OUT = scan.nextLine();
+        ICECREAM ICE = ICECREAM.valueOf(OUT);
+
+        //for ( ICECREAM C: ICE.values() ){
+        //    System.out.printf("%s\t%s\t%s\n,", C , C.getFlavour(), C.getDesc()); // FOR LOOPING THROUGH ALL ENUM VALUES
+        //}
+        System.out.println(ICE.getDesc() + "\t" + ICE.getFlavour());
+
+
+    }
+
 
 }
