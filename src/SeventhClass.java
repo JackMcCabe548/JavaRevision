@@ -1,47 +1,36 @@
-import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
-
 import java.util.Scanner;
 
 public class SeventhClass {
 
-    private enum FOURPLANETS {
-        MERCURY, VENUS, EARTH, MARS
+    private enum FOURPLANETS { // PRIVATE ENUMERATION CLASS
+        MERCURY("Hot"),
+        VENUS("Morning star"),
+        EARTH("Home"),
+        MARS("Red planet");
+
+        private final String Desc;
+
+        FOURPLANETS(String NewDesc){ // Enumeration Constructor which assigns private variable to enumeration ATTRIBUTE
+            Desc = NewDesc;
+        }
+        public String getDesc() { // GETTER CALLED BY SWITCH STATEMENT
+            return Desc;
+        }
     }
-
-    private String Asteroid;
-
-    public String SolarSystem(){
-
-        System.out.println("Enter a planet");
-        Scanner Comet = new Scanner(System.in);
-        String Sun = Comet.nextLine();
-
-        FOURPLANETS FP = FOURPLANETS.valueOf(Sun);
+    public SeventhClass(String PLANETANSWER){ // CONSTRUCTOR CLASS
+        //System.out.println("Enter a planet");
+        //Scanner Comet = new Scanner(System.in);
+        //String Sun = Comet.nextLine();
+        FOURPLANETS FP = FOURPLANETS.valueOf(PLANETANSWER); // Creates object for enumeration with object value instantiated
 
         switch(FP) {
             case MERCURY:
-                setAsteroid(FP.toString());
             case VENUS:
-                setAsteroid(FP.toString());
             case EARTH:
-                setAsteroid(FP.toString());
             case MARS:
-                setAsteroid(FP.toString());
+                System.out.println(FP.getDesc());
+                break;
         }
-        System.out.println(this);
-
-        return null;
-    }
-
-    public void setAsteroid(String NewAsteroid) {
-        Asteroid = NewAsteroid;
-    }
-    public String getAsteroid() {
-        System.out.println("Planet enetered is " + Asteroid);
-        return Asteroid;
-    }
-    public String toString() {
-        System.out.println(getAsteroid());
-    return null;
+        //return null;
     }
 }

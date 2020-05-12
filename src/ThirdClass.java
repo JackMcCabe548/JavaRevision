@@ -7,7 +7,6 @@ public class ThirdClass { //Class
     private enum values { // Check input to Enumeration values
         newton, bisection
     }
-
     ThirdClass(String NewFinalAns, int NewInput) { // Constructor class with two arguments
 
         // Puts constructor inputs through setters
@@ -47,8 +46,7 @@ public class ThirdClass { //Class
     }
 
     public String toString (){ // called by this keyword
-        System.out.println( "The output is: " + getNumberInput() + " Using method: " + getFinalAns());
-        return null;
+        return "The output is: " + getNumberInput() + " Using method: " + getFinalAns();
     }
 
 }

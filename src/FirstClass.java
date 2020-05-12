@@ -6,21 +6,23 @@ public class FirstClass {
     public static void main (String [] args) {
 
 // SecondClass code
-        SecondClass SC = new SecondClass(Grocery ); // create object which calls constructor with array argument
+
 // ThirdClass code
-            ThirdClass T = new ThirdClass("bisection", 25); // Create object which calls constructor with 2 arguments
+        ThirdClass T = new ThirdClass("newton", 25); // Create object which calls constructor with 2 arguments
 //Fourth class code
 
 //FifthClass code
-    FifthClass F =  new FifthClass();
-    F.Logic();
+        FifthClass MemberNumber1 = new FifthClass("Jack", "McCabe");
+        FifthClass MemberNumber2 = new FifthClass("John", "McCabe");
+        FifthClass MemberNumber3 = new FifthClass("Mich", "Vickers");
+        FifthClass MemberNumber4 = new FifthClass("Stephen", "McCabe");
 
 //SixthClass code
-    SixClass ICE = new SixClass("CHOCOLATE");
+
 
 // SeventhClass code
-        SeventhClass FFF = new SeventhClass();
-        FFF.SolarSystem();
+        SeventhClass FFF = new SeventhClass("VENUS");
+        //FFF.SolarSystem();
     }
 
 }
