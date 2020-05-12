@@ -11,7 +11,7 @@ public class SixClass {
         private final String Flavour;
         private final String Desc;
 
-        ICECREAM(String NewFlavour, String Description){
+        ICECREAM(String NewFlavour, String Description){ // Constructor that assigns enum attributes to variables
             Flavour = NewFlavour;
             Desc = Description;
         }

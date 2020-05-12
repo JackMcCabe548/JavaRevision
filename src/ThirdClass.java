@@ -42,12 +42,12 @@ public class ThirdClass { //Class
     public static String getFinalAns() { // GETTER
         return FinalAns;
     }
-    public static int getNumberinput() { // GETTER
+    public static int getNumberInput() { // GETTER
         return NumberInput;
     }
 
     public String toString (){ // called by this keyword
-        System.out.println( "The output is: " + getNumberinput() + " Using method: " + getFinalAns());
+        System.out.println( "The output is: " + getNumberInput() + " Using method: " + getFinalAns());
         return null;
     }
 

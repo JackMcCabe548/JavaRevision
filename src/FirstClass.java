@@ -17,5 +17,10 @@ public class FirstClass {
 
 //SixthClass code
     SixClass ICE = new SixClass("CHOCOLATE");
+
+// SeventhClass code
+        SeventhClass FFF = new SeventhClass();
+        FFF.SolarSystem();
     }
+
 }
