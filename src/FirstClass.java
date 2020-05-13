@@ -1,28 +1,36 @@
+import java.util.Arrays;
 
 public class FirstClass {
 
     static int [] Grocery  = {10, 10, 10, 10}; // Array of length 2
 
     public static void main (String [] args) {
-
 // SecondClass code
+        SecondClass MemberNumber1 = new SecondClass("Jack", "McCabe");
+        SecondClass MemberNumber2 = new SecondClass("John", "McCabe");
+        SecondClass MemberNumber3 = new SecondClass("Mich", "Vickers");
+        SecondClass MemberNumber4 = new SecondClass("Stephen", "McCabe");
 
 // ThirdClass code
-        ThirdClass T = new ThirdClass("newton", 25); // Create object which calls constructor with 2 arguments
+        ThirdClass T1 = new ThirdClass("newton", 25); // Create object which calls constructor with 2 arguments
+        ThirdClass T2 = new ThirdClass("bisection", 8);
+
 //Fourth class code
-
 //FifthClass code
-        FifthClass MemberNumber1 = new FifthClass("Jack", "McCabe");
-        FifthClass MemberNumber2 = new FifthClass("John", "McCabe");
-        FifthClass MemberNumber3 = new FifthClass("Mich", "Vickers");
-        FifthClass MemberNumber4 = new FifthClass("Stephen", "McCabe");
-
 //SixthClass code
+        // POLYMORPHISM CODE //
+        SixthClass [] OBJEK = new  SixthClass[2]; // An array of superclass type
+        OBJEK[0] = new FourthClass(); // assigns Array position 0 to FourthClass method
+        OBJEK[1] = new FifthClass(); // assigns Array position 0 to FourthClass method
+
+        for (int i = 0; i < OBJEK.length; i++) { // For loop for assigning methods to positions in array
+            OBJEK[i].Aplha(); // Assigns the value of the method in FourthClass/ FifthClass into the polymprhic array
+        }
 
 
-// SeventhClass code
-        SeventhClass FFF = new SeventhClass("VENUS");
-        //FFF.SolarSystem();
+
+
+
     }
 
 }
