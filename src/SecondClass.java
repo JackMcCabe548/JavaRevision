@@ -1,35 +1,35 @@
-import java.util.Arrays;
-import java.util.Scanner;
-// Array adding class //
-public class SecondClass { // Getters and setters
 
-    private int [] Y ;
+public class SecondClass { // Inheritance
 
-    SecondClass(int [] NEWY){ // Constructor with array argument
-        setY(NEWY); // Assigns array to SETTER method
-        System.out.println(this); // Calls to string method
+    private String FirstName;
+    private String LastName;
+    private static int MemberNumber = 0; // Static variable allows variable to belong to class not object so it can be incremented
+
+    public SecondClass(String FN, String LN) {
+        FirstName = FN;
+        LastName = LN;
+        MemberNumber++;
+        System.out.println(this);
     }
 
-    public int[] getY() { // GETTER
-        System.out.println(Arrays.toString(Y)); // When called outputs the string
-        return Y;
-    } // end of method
-
-    public void setY(int [] NEWY) { // SETTER
-        Y = NEWY;
-        try {
-            for (int i = 0; i < NEWY.length; i++) {
-                NEWY[i] = NEWY[i] + 10;
-            }
-        }
-        catch(Exception e){
-            System.out.println(e);
-        }
-    } // end of method
-
-    public String toString(){
-        getY();
-        return null;
+    public String getFirstName() { // GETTER
+        return FirstName;
     }
+
+    public String getLastName() { // GETTER
+        return LastName;
+    }
+
+    public static int getMemberNumber() { // GETTER
+        return MemberNumber;
+    }
+
+    public String toString(){ // CALLS GETTERS
+        return getFirstName() + "\t" + getLastName() + "\t" + getMemberNumber();
+
+    }
+
+
+
 
 } // end of class
