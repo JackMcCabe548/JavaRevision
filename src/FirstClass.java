@@ -18,7 +18,7 @@ public class FirstClass {
 //Fourth class code
 //FifthClass code
 //SixthClass code
-        // POLYMORPHISM CODE //
+        // POLYMORPHIC ARRAY //
         SixthClass [] OBJEK = new  SixthClass[2]; // An array of superclass type
         OBJEK[0] = new FourthClass(); // assigns Array position 0 to FourthClass method
         OBJEK[1] = new FifthClass(); // assigns Array position 0 to FourthClass method
@@ -26,6 +26,14 @@ public class FirstClass {
         for (int i = 0; i < OBJEK.length; i++) { // For loop for assigning methods to positions in array
             OBJEK[i].Aplha(); // Assigns the value of the method in FourthClass/ FifthClass into the polymprhic array
         }
+
+        // POLYMORPHIC ARGUMENTS //
+        SeventhClass j = new SeventhClass(); // class with method that contains object of superclass
+
+        SixthClass k = new FifthClass(); // Calling subclass of superclass
+        j.Inhale(k);
+        SixthClass m = new FourthClass(); // Calling subclass of superclass
+        j.Inhale(m);
 
 
 

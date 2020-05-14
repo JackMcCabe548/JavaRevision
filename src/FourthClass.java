@@ -1,9 +1,8 @@
 public class FourthClass extends FifthClass {
 
-    public int Aplha(){ // Overridden method from SixthClass
-        int Num = 44;
-        System.out.println(Num);
-        return 0;
+    public String Aplha(){ // Overridden method from SixthClass
+        System.out.println("This is the fourth class");
+        return null;
     }
 
 
