@@ -35,7 +35,7 @@ public class FirstClass {
         SixthClass m = new FourthClass(); // Calling subclass of superclass
         j.Inhale(m);
 
-
+        SeventhClass J = new SeventhClass("Jack");
 
 
 
