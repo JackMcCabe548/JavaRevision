@@ -1,4 +1,3 @@
-
 public class FifthClass extends SixthClass {
 
     public String Aplha(){ // Overridden method from SixthClass

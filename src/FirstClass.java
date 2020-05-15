@@ -19,12 +19,12 @@ public class FirstClass {
 //FifthClass code
 //SixthClass code
         // POLYMORPHIC ARRAY //
-        SixthClass [] OBJEK = new  SixthClass[2]; // An array of superclass type
-        OBJEK[0] = new FourthClass(); // assigns Array position 0 to FourthClass method
-        OBJEK[1] = new FifthClass(); // assigns Array position 0 to FourthClass method
+        SixthClass [] MultiClassArray = new  SixthClass[2]; // An array of superclass type that can hold objects of subclass types
+        MultiClassArray[0] = new FourthClass(); // assigns Array position 0 to FourthClass method
+        MultiClassArray[1] = new FifthClass(); // assigns Array position 1 to FourthClass method
 
-        for (int i = 0; i < OBJEK.length; i++) { // For loop for assigning methods to positions in array
-            OBJEK[i].Aplha(); // Assigns the value of the method in FourthClass/ FifthClass into the polymprhic array
+        for (int i = 0; i < MultiClassArray.length; i++) { // For loop for assigning methods to positions in array
+            MultiClassArray[i].Aplha(); // Assigns the value of the method in FourthClass/ FifthClass into the polymprhic array
         }
 
         // POLYMORPHIC ARGUMENTS //
@@ -34,10 +34,6 @@ public class FirstClass {
         j.Inhale(k);
         SixthClass m = new FourthClass(); // Calling subclass of superclass
         j.Inhale(m);
-
-        SeventhClass J = new SeventhClass("Jack");
-
-
 
     }
 
