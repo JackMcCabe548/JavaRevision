@@ -5,11 +5,11 @@ public class SecondClass { // Inheritance
     private String LastName;
     private static int MemberNumber = 0; // Static variable allows variable to belong to class not object so it can be incremented
 
-    public SecondClass(String FN, String LN) {
+    public SecondClass(String FN, String LN) { // 3 CONSTRUCTOR METHOD
         FirstName = FN;
         LastName = LN;
         MemberNumber++;
-        System.out.println(this);
+        System.out.println(this); // Calls toString method
     }
 
     public String getFirstName() { // GETTER
