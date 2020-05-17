@@ -1,5 +1,5 @@
 
-public class GET { //Class
+public class Newton { //Class
 
     private static String FinalAns;
     private static int NumberInput;
@@ -7,7 +7,7 @@ public class GET { //Class
     private enum values { // Check input to Enumeration values
         newton, bisection
     }
-    GET(String NewFinalAns, int NewInput) { // Constructor class with two arguments
+    Newton(String NewFinalAns, int NewInput) { // Constructor class with two arguments
 
         // Puts constructor inputs through setters
         setNumberinput(NewInput); // uses constructor value for setter

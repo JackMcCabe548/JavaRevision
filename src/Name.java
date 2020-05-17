@@ -1,8 +1,7 @@
 public class Name extends Super {
 
-    public String Data(){
+    public void Data(){
         System.out.println("Jack");
-        return null;
     }
 
 }

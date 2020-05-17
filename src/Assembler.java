@@ -2,7 +2,7 @@ import java.util.Arrays;
 
 public class Assembler {
 
-    private Super ArrayData [] = new Super[1];
+    private Super [] ArrayData = new Super[2]; // POLYMORPHIC ARRAY
     private int i = 0;
 
     public void Together(Super x){
@@ -11,7 +11,13 @@ public class Assembler {
             System.out.println("Object added number " + i);
             i++;
         }
-        //System.out.println(Arrays.toString(ArrayData));
+    }
+
+    public String printer(){
+        for (Super x: ArrayData){ // Cycles through array values
+            x.Data();
+        }
+        return null;
     }
 
 }
