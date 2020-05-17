@@ -1,5 +1,5 @@
 
-public class ThirdClass { //Class
+public class GET { //Class
 
     private static String FinalAns;
     private static int NumberInput;
@@ -7,7 +7,7 @@ public class ThirdClass { //Class
     private enum values { // Check input to Enumeration values
         newton, bisection
     }
-    ThirdClass(String NewFinalAns, int NewInput) { // Constructor class with two arguments
+    GET(String NewFinalAns, int NewInput) { // Constructor class with two arguments
 
         // Puts constructor inputs through setters
         setNumberinput(NewInput); // uses constructor value for setter
