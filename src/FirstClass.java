@@ -21,22 +21,23 @@ public class FirstClass {
 //SixthClass code//
 
         // POLYMORPHIC ARRAY //
-        SixthClass [] MultiClassArray = new  SixthClass[2]; // An array of superclass type that can hold objects of subclass types
-        MultiClassArray[0] = new FourthClass(); // assigns Array position 0 to FourthClass method
-        MultiClassArray[1] = new FifthClass(); // assigns Array position 1 to FourthClass method
+        AnimalKingdom [] MultiClassArray = new  AnimalKingdom[2]; // An array of superclass type that can hold objects of subclass types
+        MultiClassArray[0] = new Dog(); // assigns Array position 0 to FourthClass method
+        MultiClassArray[1] = new Cat(); // assigns Array position 1 to FourthClass method
 
         for (int i = 0; i < MultiClassArray.length; i++) { // For loop for assigning methods to positions in array
-            MultiClassArray[i].Aplha(); // Assigns the value of the method in FourthClass/ FifthClass into the polymprhic array
+            MultiClassArray[i].Eat(); // Assigns the value of the method in FourthClass/ FifthClass into the polymprhic array
         }
         System.out.println(); // Makes space
 
         // POLYMORPHIC ARGUMENTS //
-        SeventhClass j = new SeventhClass(); // class with method that contains object of superclass
+        Carnivore C = new Carnivore(); // Carnivore object creation
 
-        SixthClass k = new FifthClass(); // Calling subclass of superclass
-        j.Inhale(k);
-        SixthClass m = new FourthClass(); // Calling subclass of superclass
-        j.Inhale(m);
+        AnimalKingdom D = new Dog(); // Dog object of Animalkingdom type
+        AnimalKingdom E = new Cat(); // Dog object of Animalkingdom type
+
+        C.add(D); // Adds Dog object to method inside carnivore
+        C.add(E); // Adds Cat object to method inside carnivore
     }
 
 }
