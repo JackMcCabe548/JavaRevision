@@ -4,8 +4,8 @@ public class HQ {
     public static void main (String [] args) {
 
 // ThirdClass code//
-        Newton T1 = new Newton("newton", 25); // Create object which calls constructor with 2 arguments
-        Newton T2 = new Newton("bisection", 8);
+        RevisionClass a = new RevisionClass("MERCURY");
+        RevisionClass b = new RevisionClass("VENUS");
 
         System.out.println(); // Makes space
 
@@ -17,7 +17,7 @@ public class HQ {
         Assembler obj = new Assembler();
 
         Super A = new Age(); // Subclass
-        Super B = new Name(); // Subclass
+        Super B = new FirstName(); // Subclass
 
         obj.Add(A);
         obj.Add(B);

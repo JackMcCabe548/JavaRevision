@@ -7,7 +7,7 @@ public class Assembler {
     private static int i = 0;
 
     public void Add(Super x) {
-        while (i < CollectionArray.length){
+        if (i < CollectionArray.length){
             CollectionArray[i] = x;
             System.out.println("Object added at position: " + i);
             i++;
