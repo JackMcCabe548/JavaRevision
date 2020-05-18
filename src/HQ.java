@@ -1,8 +1,5 @@
-import java.util.Arrays;
 
 public class HQ {
-
-    static int [] Grocery  = {10, 10, 10, 10}; // Array of length 2
 
     public static void main (String [] args) {
 
@@ -18,13 +15,13 @@ public class HQ {
 
         // POLYMORPHIC ARGUMENTS //
         Assembler obj = new Assembler();
-        Super A = new Age();
-        Super B = new Name();
 
-        obj.Together(A);
-        obj.Together(B);
+        Super A = new Age(); // Subclass
+        Super B = new Name(); // Subclass
+
+        obj.Add(A);
+        obj.Add(B);
 
         obj.printer();
     }
-
 }
