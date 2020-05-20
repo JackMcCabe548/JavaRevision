@@ -3,7 +3,7 @@ import java.util.Arrays;
 public class Assembler {
 
     // Variables //
-    private Super [] CollectionArray = new Super[2]; // Superclass array
+    private Super [] CollectionArray = new Super[2]; // Array of superclass type
     private static int i = 0;
 
     public void Add(Super x) {

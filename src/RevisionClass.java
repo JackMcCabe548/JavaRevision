@@ -1,31 +1,20 @@
+import java.io.File;
 
 public class RevisionClass { //Class
 
-    private enum PLANETS { // ENUMERATION CLASS
+    private enum PLANETS {
         MERCURY, VENUS, EARTH
     }
 
-    private static String UserInput;
+    RevisionClass() {
 
-    RevisionClass(String Input) { // CONSTRUCTOR
-        setUserInput(Input);
-    }
+        File x = new File("C:\\Users\\jackm\\Hello.txt"); // Stores file in object
 
-    public static void setUserInput(String Input) { // SETTER
-        UserInput = Input;
-
-        PLANETS P = PLANETS.valueOf(Input); // Turns enum into object
-        switch (P){
-            case MERCURY:
-                System.out.println("You chose Mercury");
-                break;
-            case VENUS:
-                System.out.println("you chose Venus");
-                break;
-            case EARTH:
-                System.out.println("You chose Earth");
-                break;
+        if (x.exists()) { // Checks if file in variable exists
+            System.out.println(" File " + x.getName() + " can be reached! ");
         }
-    }
+        else
+            System.out.println("No file found");
 
+    }
 }

@@ -4,8 +4,7 @@ public class HQ {
     public static void main (String [] args) {
 
 // ThirdClass code//
-        RevisionClass a = new RevisionClass("MERCURY");
-        RevisionClass b = new RevisionClass("VENUS");
+        RevisionClass a = new RevisionClass();
 
         System.out.println(); // Makes space
 
