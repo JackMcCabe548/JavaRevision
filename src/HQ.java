@@ -7,6 +7,8 @@ public class HQ {
             Revision a = new Revision(); // Constructor with zero arguments
             a.Searching();
             a.Making("My note");
+            a.Reading();
+            a.Attributes();
 
             System.out.println(); // Makes space
 
