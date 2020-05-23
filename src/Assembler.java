@@ -2,22 +2,23 @@ import java.util.Arrays;
 
 public class Assembler {
 
-    private Super [] ArrayData = new Super[2]; // POLYMORPHIC ARRAY
-    private int i = 0;
+    // Polymorphic array //
+    private Super [] CollectionArray = new Super [2]; // Array of superclass type
+    private static int i = 0;
 
-    public void Together(Super x){
-        if (i < ArrayData.length) {
-            ArrayData[i] = x;
-            System.out.println("Object added number " + i);
+    public void Add(Super x) {
+        if (i < CollectionArray.length){
+            CollectionArray[i] = x;
+            System.out.println("Object added at position: " + i);
             i++;
         }
-    }
 
+    }
     public String printer(){
-        for (Super x: ArrayData){ // Cycles through array values
-            x.Data();
-        }
+        for (Super y: CollectionArray) { // Enhanced for loop
+            y.Data();
+            }
         return null;
-    }
+        }
 
-}
+   }

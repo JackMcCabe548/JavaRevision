@@ -1,30 +1,33 @@
-import java.util.Arrays;
 
 public class HQ {
 
-    static int [] Grocery  = {10, 10, 10, 10}; // Array of length 2
-
     public static void main (String [] args) {
 
-// ThirdClass code//
-        Newton T1 = new Newton("newton", 25); // Create object which calls constructor with 2 arguments
-        Newton T2 = new Newton("bisection", 8);
+        // Revision
+            Revision a = new Revision(); // Constructor with zero arguments
+            a.Searching();
+            a.Making("My note");
+            a.Reading();
+            a.Attributes();
 
-        System.out.println(); // Makes space
+            System.out.println(); // Makes space
 
-//Fourth class code//
-//FifthClass code//
-//SixthClass code//
+        // RevisionTwo
+            RevisionTwo AA = new RevisionTwo("USER1"); // Calls constructor with one argument
+            RevisionTwo BB = new RevisionTwo("USER2"); // Calls constructor with one argument
+
+            System.out.println(); // Makes space
 
         // POLYMORPHIC ARGUMENTS //
-        Assembler obj = new Assembler();
-        Super A = new Age();
-        Super B = new Name();
+            Assembler obj = new Assembler(); // Class with method that takes superclass object
 
-        obj.Together(A);
-        obj.Together(B);
+            Super B = new FirstName(); // Subclass of Super
+            FirstName C = new LastName(); // Subclass of FirstName
 
-        obj.printer();
+            obj.Add(B); // add object of class to array
+            obj.Add(C); // add object of class to array
+
+            obj.printer(); // Prints array values
+
     }
-
 }
