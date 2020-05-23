@@ -3,24 +3,29 @@ public class HQ {
 
     public static void main (String [] args) {
 
-// ThirdClass code//
-        RevisionClass a = new RevisionClass();
+        // Revision
+            Revision a = new Revision(); // Constructor with zero arguments
+            a.Searching();
+            a.Making("My note");
 
-        System.out.println(); // Makes space
+            System.out.println(); // Makes space
 
-//Fourth class code//
-//FifthClass code//
-//SixthClass code//
+        // RevisionTwo
+            RevisionTwo AA = new RevisionTwo("USER1"); // Calls constructor with one argument
+            RevisionTwo BB = new RevisionTwo("USER2"); // Calls constructor with one argument
+
+            System.out.println(); // Makes space
 
         // POLYMORPHIC ARGUMENTS //
-        Assembler obj = new Assembler();
+            Assembler obj = new Assembler(); // Class with method that takes superclass object
 
-        Super A = new Age(); // Subclass
-        Super B = new FirstName(); // Subclass
+            Super B = new FirstName(); // Subclass of Super
+            FirstName C = new LastName(); // Subclass of FirstName
 
-        obj.Add(A);
-        obj.Add(B);
+            obj.Add(B); // add object of class to array
+            obj.Add(C); // add object of class to array
 
-        obj.printer();
+            obj.printer(); // Prints array values
+
     }
 }

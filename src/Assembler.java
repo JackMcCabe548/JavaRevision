@@ -2,8 +2,8 @@ import java.util.Arrays;
 
 public class Assembler {
 
-    // Variables //
-    private Super [] CollectionArray = new Super[2]; // Array of superclass type
+    // Polymorphic array //
+    private Super [] CollectionArray = new Super [2]; // Array of superclass type
     private static int i = 0;
 
     public void Add(Super x) {
@@ -15,7 +15,7 @@ public class Assembler {
 
     }
     public String printer(){
-        for (Super y: CollectionArray) {
+        for (Super y: CollectionArray) { // Enhanced for loop
             y.Data();
             }
         return null;
