@@ -37,7 +37,7 @@ public class Revision { //Class
          // Search for desired file to read
         try { // Attempts to read code
             Scanner Reader = new Scanner(Y); // Scanner of file object
-            while (Reader.hasNextLine()){ // While theres text to read
+            while (Reader.hasNextLine()){ // While theres text to read prints text
                 String data = Reader.nextLine(); // Import scanner to variable
                 System.out.println(data); // Print output
             }

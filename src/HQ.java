@@ -18,6 +18,11 @@ public class HQ {
 
             System.out.println(); // Makes space
 
+        // RevisionThree
+            RevisionThree R = new RevisionThree();
+
+            System.out.println();
+
         // POLYMORPHIC ARGUMENTS //
             Assembler obj = new Assembler(); // Class with method that takes superclass object
 
@@ -28,6 +33,7 @@ public class HQ {
             obj.Add(C); // add object of class to array
 
             obj.printer(); // Prints array values
+
 
     }
 }
