@@ -6,7 +6,7 @@ public class HQ {
         // Revision
             Revision a = new Revision(); // Constructor with zero arguments
             a.Searching();
-            a.Making("My note");
+            a.Making("RANDOM SHIT");
             a.Reading();
             a.Attributes();
 
@@ -20,6 +20,8 @@ public class HQ {
 
         // RevisionThree
             RevisionThree R = new RevisionThree();
+            System.out.println(); // Space
+            R.intermediate();
 
             System.out.println();
 
@@ -34,6 +36,18 @@ public class HQ {
 
             obj.printer(); // Prints array values
 
+            HQ g = new HQ();
+            System.out.println(g.anus(8));
 
     }
+
+    public long anus (long ans){ // recusrion method
+            if (ans <= 1) {
+                    return 1;
+            }
+            else
+                    return ans* anus(ans-1);
+
+    }
+
 }
