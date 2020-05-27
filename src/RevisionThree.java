@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.Scanner;
 
@@ -47,6 +48,13 @@ public class RevisionThree {
             List2.add(y); // Adds array items to ArrayList
         }
 
+        editList(List, List2);
+
+    }
+    public static void editList(Collection<String>L , Collection<String>L2 ) {
+        for (int i = 0; i < L.size() ; i++) {
+            if ()
+        }
     }
 
 }
