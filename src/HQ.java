@@ -20,8 +20,15 @@ public class HQ {
 
         // RevisionThree
             RevisionThree R = new RevisionThree();
+
             System.out.println(); // Space
+
             R.intermediate();
+
+            System.out.println();
+
+
+            R.LinkedListMethod();
 
             System.out.println();
 
@@ -36,8 +43,10 @@ public class HQ {
 
             obj.printer(); // Prints array values
 
+            System.out.println(); // Spacing
+
             HQ g = new HQ();
-            System.out.println(g.anus(8));
+            System.out.println(g.anus(7));
 
     }
 
@@ -47,7 +56,6 @@ public class HQ {
             }
             else
                     return ans* anus(ans-1);
-
     }
 
 }

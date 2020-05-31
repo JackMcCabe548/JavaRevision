@@ -1,16 +1,15 @@
 Topics to learn:
 -Object orientated programming
-    -Inheritance
+    -Inheritance (done)
     -Polymorphism
     -Abstraction
     -Encapsulation 
 
 -Learn to use GitHub (Notes in Black book)
 
--Constructors (Java Boston youtube videos)
+-Constructors (done)
 -Stacks
--Getters and setters methods
+-Getters and setters methods (done)
 -Recursion
--Linked lists
 -ArrayLists
 -Linked lists
