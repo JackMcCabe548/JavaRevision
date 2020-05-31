@@ -6,7 +6,7 @@ import java.lang.*;
 public class Revision { //Class
 
     private Scanner xx;
-    File Y = new File("D:\\Java notes\\Reference.txt"); // For reading method
+    File TextNote = new File("D:\\Java notes\\Reference.txt"); // Searches for file
 
     public void Searching() { // Method for searching or a file
 
@@ -20,9 +20,9 @@ public class Revision { //Class
 
     public void Making(String Name) { // Method for making a file
 
-        final Formatter y; //Writing Strings to files
+        //final Formatter y; //Writing Strings to files
         try {
-            y = new Formatter("D:\\"+Name+".txt"); // Creates a file with Constructor argument being the file name
+            Formatter y = new Formatter("D:\\"+Name+".txt"); // Creates a file with Constructor argument being the file name
             y.format("%s", "File created by Jack"); // Writes to file
             y.close(); // Closes file
 
@@ -35,9 +35,10 @@ public class Revision { //Class
 
     public void Reading() {
          // Search for desired file to read
+
         try { // Attempts to read code
-            Scanner Reader = new Scanner(Y); // Scanner of file object
-            while (Reader.hasNextLine()){ // While theres text to read
+            Scanner Reader = new Scanner(TextNote); // Scanner of file object
+            while (Reader.hasNextLine()){ // While theres text to read prints text
                 String data = Reader.nextLine(); // Import scanner to variable
                 System.out.println(data); // Print output
             }
@@ -48,11 +49,11 @@ public class Revision { //Class
 
     public String Attributes () {
 
-        if (Y.exists()) {
-            System.out.println("File is called: " + Y.getName()); // Gets file name
-            System.out.println("File length is: " + Y.length()); // Gets file length
-            System.out.println("Can this file be written  to?: " + Y.canWrite()); // Checks if file can be written too
-            System.out.println("Can this file be read?: " + Y.canRead()); // Checks if file can be read
+        if (TextNote.exists()) {
+            System.out.println("File is called: " + TextNote.getName()); // Gets file name
+            System.out.println("File length is: " + TextNote.length()); // Gets file length
+            System.out.println("Can this file be written  to?: " + TextNote.canWrite()); // Checks if file can be written too
+            System.out.println("Can this file be read?: " + TextNote.canRead()); // Checks if file can be read
             //Y.delete(); // Deletes the file
         }
         return null;

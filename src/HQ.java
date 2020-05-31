@@ -6,7 +6,7 @@ public class HQ {
         // Revision
             Revision a = new Revision(); // Constructor with zero arguments
             a.Searching();
-            a.Making("My note");
+            a.Making("RANDOM SHIT");
             a.Reading();
             a.Attributes();
 
@@ -17,6 +17,20 @@ public class HQ {
             RevisionTwo BB = new RevisionTwo("USER2"); // Calls constructor with one argument
 
             System.out.println(); // Makes space
+
+        // RevisionThree
+            RevisionThree R = new RevisionThree();
+
+            System.out.println(); // Space
+
+            R.intermediate();
+
+            System.out.println();
+
+
+            R.LinkedListMethod();
+
+            System.out.println();
 
         // POLYMORPHIC ARGUMENTS //
             Assembler obj = new Assembler(); // Class with method that takes superclass object
@@ -29,5 +43,19 @@ public class HQ {
 
             obj.printer(); // Prints array values
 
+            System.out.println(); // Spacing
+
+            HQ g = new HQ();
+            System.out.println(g.anus(7));
+
     }
+
+    public long anus (long ans){ // recusrion method
+            if (ans <= 1) {
+                    return 1;
+            }
+            else
+                    return ans* anus(ans-1);
+    }
+
 }
