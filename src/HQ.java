@@ -27,9 +27,8 @@ public class HQ {
 
             System.out.println();
 
-
-            R.LinkedListMethod();
-
+         // Cookie
+            Cookie Cook = new Cookie(67);
             System.out.println();
 
         // POLYMORPHIC ARGUMENTS //

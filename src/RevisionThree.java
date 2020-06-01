@@ -29,7 +29,7 @@ public class RevisionThree {
     public void intermediate () {
 
         String [] itemList = {"Bread" , "Orange juice" , "Milk" , "Butter"};
-        LinkedList <String> Linked = new LinkedList<>();
+        LinkedList <String> Linked = new LinkedList<String>();
 
         for (String x : itemList) { // Enhanced for loop
             Linked.add(x); // Adds array items to linked list
@@ -54,22 +54,6 @@ public class RevisionThree {
     }
     public static void RemoveMe(List <String> L, int from , int to) {
         L.subList(from, to).clear(); // Takes portion of list entered and removes it
-    }
-
-
-
-    public void LinkedListMethod () {
-
-        LinkedList LL = new LinkedList();
-        LL.addFirst("Jack"); // Adds item to first item
-        LL.add("Michelle");
-        LL.add("Steve");
-        LL.add("Pamela");
-        LL.addLast("John"); // Adds item to last position
-        LL.removeFirst();
-
-        System.out.println(LL); // Removes first item
-
     }
 
 }
