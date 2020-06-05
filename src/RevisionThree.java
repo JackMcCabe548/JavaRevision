@@ -2,6 +2,9 @@ import java.util.*;
 
 public class RevisionThree {
 
+    String [] itemList = {"Brot" , "Wasser" , "Honig" , "Melone", "Milch" , "Apfelsaft"};
+    List <String> Linked = new LinkedList<>();
+
     private static int x = 1;
     Scanner in = new Scanner(System.in);
 /*
@@ -28,9 +31,8 @@ public class RevisionThree {
 */
     public void intermediate () {
 
-        String [] itemList = {"Bread" , "Orange juice" , "Milk" , "Butter"};
-        LinkedList <String> Linked = new LinkedList<>();
 
+    // ADD ARRAY ITEMS TO LINKEDLIST //
         for (String x : itemList) { // Enhanced for loop
             Linked.add(x); // Adds array items to linked list
         }
@@ -38,12 +40,14 @@ public class RevisionThree {
         printMe(Linked); // Calls method of print LinkedList
         System.out.println();// Spacing
 
-        Linked.add("Strawberries"); // Add item to linked list
-        printMe(Linked); // Calls method of print LinkedList
+        Linked.add("Erdbeeren"); // Add item to linked list
+        printMe(Linked); // Calls method of print LinkedLis
         System.out.println(); // Spacing
 
-        RemoveMe(Linked , 2 , 3);
+        RemoveMe(Linked , 1 , 2);
         printMe(Linked); // Calls method of print LinkedList
+
+        System.out.println("Item 2 is " + Linked.get(1));
 
     }
 
@@ -51,25 +55,19 @@ public class RevisionThree {
         for (String y : L) {
             System.out.println(y);
         }
+        System.out.println(); // Spacing
+
+        //for (int i = 0 ; i < L.size() ; i++) {
+        //    System.out.println( L.get(i));
+        //}
     }
     public static void RemoveMe(List <String> L, int from , int to) {
-        L.subList(from, to).clear(); // Takes portion of list entered and removes it
-    }
-
-
-
-    public void LinkedListMethod () {
-
-        LinkedList LL = new LinkedList();
-        LL.addFirst("Jack"); // Adds item to first item
-        LL.add("Michelle");
-        LL.add("Steve");
-        LL.add("Pamela");
-        LL.addLast("John"); // Adds item to last position
-        LL.removeFirst();
-
-        System.out.println(LL); // Removes first item
-
+        try {
+            L.subList(from, to).clear(); // Takes portion of list entered and removes it
+        }
+        catch (Exception e) {
+            System.out.println(e);
+        }
     }
 
 }

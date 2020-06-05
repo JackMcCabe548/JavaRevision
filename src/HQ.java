@@ -27,8 +27,8 @@ public class HQ {
 
             System.out.println();
 
-
-            R.LinkedListMethod();
+         // Cookie
+            Cookie Cook = new Cookie(67);
 
             System.out.println();
 
@@ -41,9 +41,9 @@ public class HQ {
             obj.Add(B); // add object of class to array
             obj.Add(C); // add object of class to array
 
-            obj.printer(); // Prints array values
-
-            System.out.println(); // Spacing
+            System.out.println();
+            obj.asList();
+            System.out.println();
 
             HQ g = new HQ();
             System.out.println(g.anus(7));
