@@ -41,15 +41,9 @@ public class HQ {
             obj.Add(B); // add object of class to array
             obj.Add(C); // add object of class to array
 
-            System.out.println(); // Spacing
-
-            obj.PrintMe();
             System.out.println();
             obj.asList();
             System.out.println();
-            obj.asArray();
-
-            System.out.println(); // Spacing
 
             HQ g = new HQ();
             System.out.println(g.anus(7));

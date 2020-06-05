@@ -1,13 +1,14 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedList;
+import java.util.*;
 
 public class Assembler {
 
     // Polymorphic array //
-    private ArrayList <String> EndLessList = new ArrayList<>(); // ArrayList
-    private LinkedList <Super> BigList = new LinkedList <Super> ();// Linked List
     private Super [] CollectionArray = new Super [2]; // Array of superclass type
+
+    private List <Super> EndLessList = new ArrayList<>(); // ArrayList
+
+    private List <Super> BigList = new LinkedList <> ();// Linked List
+
     private static int i = 0;
 
     public void Add(Super x) {
@@ -18,23 +19,30 @@ public class Assembler {
             }
     }
 
-    public void PrintMe(){ // Prints array when called
-        for (Super K: CollectionArray) { // Enhanced for loop
-            K.Data();
-        }
-    }
-
     public void asList () {
-        LinkedList <Super> BigList = new LinkedList <Super> (Arrays.asList(CollectionArray)); // Converts Array to Linked List
-        System.out.println(BigList);
-    }
+        List <Super> BigList = new LinkedList <> (Arrays.asList(CollectionArray)); // Converts Array to Linked List
 
-    public void asArray () { // Takes the Linked List and turns it back into an Array
-        for (Super U : BigList) {
-            EndLessList.add(BigList);
+        for (Super M : BigList) { // Prints LinkedList
+                M.Data();
+            }
+        System.out.println("Spacings");
         }
-    }
 
+
+     public void asArray () {
+         List <Super> EndLessList = new ArrayList<>(BigList);
+         System.out.println(EndLessList);
+
+         for (Super V : EndLessList) {
+             V.Data();
+         }
+         System.out.println("Spacing");
+
+         for (i = 0; i < EndLessList.size() ; i++) {
+             System.out.println(EndLessList.get(i));
+         }
+
+     }
 
 
     }
