@@ -13,8 +13,8 @@ public class HQ {
             System.out.println(); // Makes space
 
         // RevisionTwo
-            RevisionTwo AA = new RevisionTwo("USER1"); // Calls constructor with one argument
-            RevisionTwo BB = new RevisionTwo("USER2"); // Calls constructor with one argument
+            RevisionTwo AA = new RevisionTwo("JACK"); // Calls constructor with one argument
+            RevisionTwo BB = new RevisionTwo("JOHN"); // Calls constructor with one argument
 
             System.out.println(); // Makes space
 
@@ -33,24 +33,22 @@ public class HQ {
             System.out.println();
 
         // POLYMORPHIC ARGUMENTS //
-            Assembler obj = new Assembler(); // Class with method that takes superclass object
+        CollectorClass Z = new CollectorClass();
 
-            Super B = new FirstName(); // Subclass of Super
-            FirstName C = new LastName(); // Subclass of FirstName
+        CollectedData A = new FirstName();
+        CollectedData B = new LastName();
 
-            obj.Add(B); // add object of class to array
-            obj.Add(C); // add object of class to array
-
-            System.out.println();
-            obj.asList();
-            System.out.println();
-
-            HQ g = new HQ();
-            System.out.println(g.anus(7));
+        Z.Creator(A);
+        Z.Creator(B);
+        System.out.println("Values are: ");
+        Z.UserProfile();
+        System.out.println();
+        HQ g = new HQ();
+        System.out.println(g.anus(7));
 
     }
 
-    public long anus (long ans){ // recusrion method
+    public long anus (long ans){ // Recusrion method
             if (ans <= 1) {
                     return 1;
             }

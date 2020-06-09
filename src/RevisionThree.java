@@ -3,7 +3,8 @@ import java.util.*;
 public class RevisionThree {
 
     String [] itemList = {"Brot" , "Wasser" , "Honig" , "Melone", "Milch" , "Apfelsaft"};
-    List <String> Linked = new LinkedList<>();
+    LinkedList <String> Extras = new LinkedList<>();
+    LinkedList <String> Linked = new LinkedList<>();
 
     private static int x = 1;
     Scanner in = new Scanner(System.in);
@@ -38,16 +39,23 @@ public class RevisionThree {
         }
 
         printMe(Linked); // Calls method of print LinkedList
+
         System.out.println();// Spacing
 
-        Linked.add("Erdbeeren"); // Add item to linked list
-        printMe(Linked); // Calls method of print LinkedLis
+        Linked.addLast("Erdbeeren"); // Add item to linked list
+        Linked.addFirst("Kartoffel");
+        printMe(Linked); // Calls method of print LinkedList
+
         System.out.println(); // Spacing
 
         RemoveMe(Linked , 1 , 2);
         printMe(Linked); // Calls method of print LinkedList
 
+        Collections.sort(Linked); // Sorts Alphabetically
+        //Collections.sort(Linked, Collections.reverseOrder()); // Reverse sorting
         System.out.println("Item 2 is " + Linked.get(1));
+        Extras.addAll(Linked); // Add one linkedlist to another
+
 
     }
 
@@ -57,6 +65,7 @@ public class RevisionThree {
         }
         System.out.println(); // Spacing
 
+        // Alternate printing technique //
         //for (int i = 0 ; i < L.size() ; i++) {
         //    System.out.println( L.get(i));
         //}

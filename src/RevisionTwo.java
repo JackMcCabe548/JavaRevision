@@ -1,34 +1,34 @@
-import java.io.IOException;
-import java.util.Scanner;
 
 public class RevisionTwo {
 
-    public enum People { // Enumeration values with one argument
-        USER1("JACK", "MCCABE"),
-        USER2("JOHN" , "MCCABE"),
-        USER3("MICHELLE" , "VICKERS");
+   private enum Names {
+       JACK("McCabe ", 21),
+       JOHN("McCabe ", 61),
+       MICHELLE("Vickers ", 49),
+       PAMELA("Vickers ", 81),
+       STEVE("McCabe ", 60),
+       STEPHEN("McCabe ", 29);
 
-        private String FirstName; // For Enumeration argument
-        private String SecondName; //
+       private String Last;
+       private int Age; // for enum attribute
 
-        People(String First, String Second){ // ENUM CONSTRUCTOR: Argument variable linked to enumeration description
-            FirstName = First; // Set private variable to enum description
-            SecondName = Second; // Set private variable to enum description
-        }
+       Names (String LastName ,int Number) { // Enum Constructor
+            Last = LastName;
+            Age = Number;
+       }
+       public String getLastName() { //Getter
+           return Last;
+       }
 
-        public String getFirstName() {
-            return FirstName;
-        }
-        public String getSecondName() {
-            return SecondName;
-        }
-    }
+       public int getAge() { // Getter
+           return Age;
+       }
+   }
 
-    RevisionTwo(String ANS) { // CONSTRUCTOR
+   public RevisionTwo(String Initial) { // Constructor
 
-        People N = People.valueOf(ANS); // Object of enum value
+       Names N  = Names.valueOf(Initial); // Create object of enum
+       System.out.println(N.getLastName() + N.getAge());
+   }
 
-        System.out.println("First name: " + N.getFirstName() + " Last name: " + N.getSecondName()); // Object of Enum which gets getter
-
-    }//end of method
 }

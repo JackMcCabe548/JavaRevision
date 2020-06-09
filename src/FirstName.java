@@ -1,7 +1,6 @@
-public class FirstName extends Super {
+public class FirstName extends CollectedData {
 
-    public void Data(){ // Overridden method
+    public void Data() {
         System.out.println("Jack");
     }
-
 }
