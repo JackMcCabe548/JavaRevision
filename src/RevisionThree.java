@@ -2,9 +2,11 @@ import java.util.*;
 
 public class RevisionThree {
 
-    String [] itemList = {"Brot" , "Wasser" , "Honig" , "Melone", "Milch" , "Apfelsaft"};
-    LinkedList <String> Extras = new LinkedList<>();
-    LinkedList <String> Linked = new LinkedList<>();
+    String [] itemList = {"Brot" , "Wasser" , "Honig" , "Melone", "Milch" , "Apfelsaft"}; // Array
+    LinkedList <String> Extras = new LinkedList<>(); // LinkedList
+    LinkedList <String> Linked = new LinkedList<>(); // LinkedList
+
+    Character [] Apple = new Character[3]; // Char array
 
     private static int x = 1;
     Scanner in = new Scanner(System.in);
@@ -52,10 +54,19 @@ public class RevisionThree {
         printMe(Linked); // Calls method of print LinkedList
 
         Collections.sort(Linked); // Sorts Alphabetically
-        //Collections.sort(Linked, Collections.reverseOrder()); // Reverse sorting
+        //Collections.reverse(Linked); //Reverse order
         System.out.println("Item 2 is " + Linked.get(1));
-        Extras.addAll(Linked); // Add one linkedlist to another
 
+
+
+    }
+
+    public void Test () {
+        LinkedList <Character> Orange = new LinkedList<>(Arrays.asList(Apple));
+        Collections.fill(Orange, 'x'); // Fills linkedlist with data
+            for (Character y : Orange) {
+                System.out.println(y);
+            }
 
     }
 

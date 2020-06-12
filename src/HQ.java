@@ -27,6 +27,10 @@ public class HQ {
 
             System.out.println();
 
+            R.Test();
+
+            System.out.println();
+
          // Cookie
             Cookie Cook = new Cookie(67);
 
@@ -35,20 +39,21 @@ public class HQ {
         // POLYMORPHIC ARGUMENTS //
         CollectorClass Z = new CollectorClass();
 
-        CollectedData A = new FirstName();
-        CollectedData B = new LastName();
+        CollectedData A = new FirstName(); // Object of subclass
+        CollectedData B = new LastName(); // Object of subclass
 
         Z.Creator(A);
         Z.Creator(B);
         System.out.println("Values are: ");
-        Z.UserProfile();
-        System.out.println();
-        HQ g = new HQ();
-        System.out.println(g.anus(7));
+        Z.UserProfile(); // Print method
+        System.out.println(); // Spacing
+
+
+        System.out.println(anus(5)); // Call and print method
 
     }
 
-    public long anus (long ans){ // Recusrion method
+    public static long anus (long ans){ // Recusrion method
             if (ans <= 1) {
                     return 1;
             }
