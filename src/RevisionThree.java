@@ -2,14 +2,16 @@ import java.util.*;
 
 public class RevisionThree {
 
-    String [] itemList = {"Brot" , "Wasser" , "Honig" , "Melone", "Milch" , "Apfelsaft"}; // Array
-    LinkedList <String> Extras = new LinkedList<>(); // LinkedList
-    LinkedList <String> Linked = new LinkedList<>(); // LinkedList
+    String [] itemList = {"Brot" , "Wasser" , "Honig" , "Melone", "Milch" , "Apfelsaft"}; // String Array7
+    LinkedList <String> Linked = new LinkedList<>(); // String LinkedList
 
-    Character [] Apple = new Character[3]; // Char array
+    Character [] Apple = new Character[2]; // Character array
+
+    Character [] CHARS = {'J', 'A', 'C', 'K'};
+    LinkedList <Character> LETTERS = new LinkedList<>();
 
     private static int x = 1;
-    Scanner in = new Scanner(System.in);
+
 /*
     RevisionThree() {
 
@@ -34,7 +36,6 @@ public class RevisionThree {
 */
     public void intermediate () {
 
-
     // ADD ARRAY ITEMS TO LINKEDLIST //
         for (String x : itemList) { // Enhanced for loop
             Linked.add(x); // Adds array items to linked list
@@ -57,21 +58,23 @@ public class RevisionThree {
         //Collections.reverse(Linked); //Reverse order
         System.out.println("Item 2 is " + Linked.get(1));
 
-
+        for (Character x : CHARS) {
+            LETTERS.add(x);
+        }
+        printMe(LETTERS);
 
     }
 
     public void Test () {
-        LinkedList <Character> Orange = new LinkedList<>(Arrays.asList(Apple));
-        Collections.fill(Orange, 'x'); // Fills linkedlist with data
+        LinkedList <Character> Orange = new LinkedList<Character>(Arrays.asList(Apple)); // LinkedList
+        Collections.fill(Orange, 'x'); // Fills LinkedList with data
             for (Character y : Orange) {
                 System.out.println(y);
             }
-
     }
 
-    public static void printMe (List <String> L) { // method for printing linkedlist values
-        for (String y : L) {
+    public static <T> void printMe (List <T> L) { // Generic method for printing linkedList values
+        for (T y : L) {
             System.out.println(y);
         }
         System.out.println(); // Spacing
@@ -81,6 +84,7 @@ public class RevisionThree {
         //    System.out.println( L.get(i));
         //}
     }
+
     public static void RemoveMe(List <String> L, int from , int to) {
         try {
             L.subList(from, to).clear(); // Takes portion of list entered and removes it

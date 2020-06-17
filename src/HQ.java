@@ -6,7 +6,7 @@ public class HQ {
         // Revision
             Revision a = new Revision(); // Constructor with zero arguments
             a.Searching();
-            a.Making("RANDOM SHIT");
+            a.Making("RANDOM SHIT"); // Argument is the File Name
             a.Reading();
             a.Attributes();
 
@@ -51,14 +51,15 @@ public class HQ {
 
         System.out.println(anus(5)); // Call and print method
 
+        
     }
 
-    public static long anus (long ans){ // Recusrion method
+    public static long anus (long ans){ // Recursion method
             if (ans <= 1) {
                     return 1;
             }
             else
-                    return ans* anus(ans-1);
+                    return ans * anus(ans-1);
     }
 
 }

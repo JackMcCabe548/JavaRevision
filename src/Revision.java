@@ -5,7 +5,7 @@ import java.lang.*;
 
 public class Revision { //Class
 
-    private Scanner xx;
+    private Scanner xx; //For Reading method
     File TextNote = new File("D:\\Java notes\\Reference.txt"); // Searches for file
 
     public void Searching() { // Method for searching or a file

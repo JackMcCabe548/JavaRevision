@@ -2,9 +2,9 @@ public class Cookie {
 
     private static int numbres;
 
-    Cookie(int Num) {
+    Cookie(int Num) { // Constructor 
         setNumbres(Num);
-        System.out.println(this);
+        System.out.println(this); //Calls toString method
     }
 
     public static int getNumbres() {
