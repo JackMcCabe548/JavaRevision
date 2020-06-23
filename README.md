@@ -1,15 +1,15 @@
 Topics to learn:
 -Object orientated programming
-    -Inheritance (done)
-    -Polymorphism
+    -Inheritance (Done)
+    -Polymorphism (Done)
     -Abstraction
     -Encapsulation 
 
 -Learn to use GitHub (Notes in Black book)
 
--Constructors (done)
--Stacks
--Getters and setters methods (done)
--Recursion
--ArrayLists
--Linked lists
+-Constructors (Done)
+-Stacks (Done)
+-Getters and setters methods (Done)
+-Recursion (Done)
+-ArrayLists (Done)
+-Linked lists (Done)

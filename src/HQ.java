@@ -36,6 +36,15 @@ public class HQ {
 
             System.out.println();
 
+         //THREADDDD
+            Thread T1 = new Thread(new THREADDDD("Timer", 100)); // Creates object of Thread
+            Thread T2 = new Thread(new THREADDDD("Timer 2", 99)); // Creates object of Thread (Second item finishes first)
+
+            T1.start();
+            T2.start();
+
+        System.out.println(); // Spacing
+
         // POLYMORPHIC ARGUMENTS //
         CollectorClass Z = new CollectorClass();
 
@@ -51,6 +60,15 @@ public class HQ {
 
         System.out.println(anus(5)); // Call and print method
 
+        System.out.println(); // Spacing
+
+        for (int x = 0; x < 5; x++) {
+            if (x == 3){
+                continue; // Skips integer 5
+            }
+            System.out.println("The numbers are " + x);
+        }
+
         
     }
 
@@ -59,7 +77,7 @@ public class HQ {
                     return 1;
             }
             else
-                    return ans * anus(ans-1);
+                    return ans * anus(ans-1); // Recursion calls its own method
     }
 
 }

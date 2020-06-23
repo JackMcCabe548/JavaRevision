@@ -36,33 +36,36 @@ public class RevisionThree {
 */
     public void intermediate () {
 
-    // ADD ARRAY ITEMS TO LINKEDLIST //
-        for (String x : itemList) { // Enhanced for loop
-            Linked.add(x); // Adds array items to linked list
-        }
+            addTogether(Linked, itemList); // Adds array items to linkedlist
 
-        printMe(Linked); // Calls method of print LinkedList
+            printMe(Linked); // Calls method of print LinkedList
 
         System.out.println();// Spacing
 
-        Linked.addLast("Erdbeeren"); // Add item to linked list
-        Linked.addFirst("Kartoffel");
-        printMe(Linked); // Calls method of print LinkedList
+            Linked.addLast("Erdbeeren"); // Add item to linked list
+            Linked.addFirst("Kartoffel");
+
+            printMe(Linked); // Calls method of print LinkedList
 
         System.out.println(); // Spacing
 
-        RemoveMe(Linked , 1 , 2);
-        printMe(Linked); // Calls method of print LinkedList
+            RemoveMe(Linked , 1 , 2);
+            printMe(Linked); // Calls method of print LinkedList
 
-        Collections.sort(Linked); // Sorts Alphabetically
-        //Collections.reverse(Linked); //Reverse order
-        System.out.println("Item 2 is " + Linked.get(1));
+            Collections.sort(Linked); // Sorts Alphabetically
+            //Collections.reverse(Linked); //Reverse order
+            System.out.println("Item 2 is " + Linked.get(1));
 
-        for (Character x : CHARS) {
-            LETTERS.add(x);
+            addTogether(LETTERS, CHARS);
+
+            printMe(LETTERS);
+
+    }
+
+    public static <T> void addTogether (List <T> L, T n []) { // Generic Method for Adding items from an Array to LinkedList
+        for (T X : n) {
+            L.add(X);
         }
-        printMe(LETTERS);
-
     }
 
     public void Test () {
