@@ -8,8 +8,8 @@ Topics to learn:
 -Learn to use GitHub (Notes in Black book)
 
 -Constructors (Done)
--Stacks (Done)
+-Stacks
 -Getters and setters methods (Done)
 -Recursion (Done)
 -ArrayLists (Done)
--Linked lists (Done)
+-Linked lists

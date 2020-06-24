@@ -10,6 +10,8 @@ public class RevisionThree {
     Character [] CHARS = {'J', 'A', 'C', 'K'};
     LinkedList <Character> LETTERS = new LinkedList<>();
 
+    private static boolean Val = false;
+
     private static int x = 1;
 
 /*
@@ -60,9 +62,11 @@ public class RevisionThree {
 
             printMe(LETTERS);
 
+            ReturnName(Linked, "Apfelsaft"); // For searching for item in LinkedList
+
     }
 
-    public static <T> void addTogether (List <T> L, T n []) { // Generic Method for Adding items from an Array to LinkedList
+    public static <T> void addTogether (List <T> L, T [] n) { // Generic Method for Adding items from an Array to LinkedList
         for (T X : n) {
             L.add(X);
         }
@@ -95,6 +99,22 @@ public class RevisionThree {
         catch (Exception e) {
             System.out.println(e);
         }
+    }
+
+    public static <T> void ReturnName (List <T> B, String x) {
+
+        Iterator it = B.iterator(); // Operates through the object of list
+
+        while(it.hasNext() && Val == false) { // while loop works while iterator has another item
+            if (it.next() == x) {
+                System.out.println( x + " exists ");
+                Val = true; // Terminates program once element is found
+            } else {
+                System.out.println("Item not found");
+            }
+
+        } //whileloop
+
     }
 
 }
