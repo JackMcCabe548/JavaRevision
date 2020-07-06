@@ -1,6 +1,9 @@
-public class FirstName extends CollectedData {
+public class FirstName implements CollectedData {
 
+    @Override
     public void Data() {
         System.out.println("Jack");
     }
+
+
 }

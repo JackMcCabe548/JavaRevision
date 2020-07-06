@@ -2,8 +2,8 @@ import java.util.*;
 
 public class RevisionThree {
 
-    String [] itemList = {"Brot" , "Wasser" , "Honig" , "Melone", "Milch" , "Apfelsaft"}; // String Array7
-    LinkedList <String> Linked = new LinkedList<>(); // String LinkedList
+    private static String [] itemList = {"Brot" , "Wasser" , "Honig" , "Melone", "Milch" , "Apfelsaft"}; // String Array
+    private static LinkedList <String> Linked = new LinkedList<>(); // String LinkedList
 
     Character [] Apple = new Character[2]; // Character array
 

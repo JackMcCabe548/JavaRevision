@@ -6,7 +6,7 @@ import java.lang.*;
 public class Revision { //Class
 
     private Scanner xx; //For Reading method
-    File TextNote = new File("D:\\Java notes\\Reference.txt"); // Searches for file
+    File TextNote = new File("D:\\Java notes\\Reference.txt"); // Searches for file and stores as object
 
     public void Searching() { // Method for searching or a file
 
@@ -28,8 +28,8 @@ public class Revision { //Class
 
             System.out.println("File created");
         }
-        catch (Exception e) {
-            System.out.println("You made a " + e);
+        catch (Exception e) { // Checked error (User caused error)
+            System.err.println("You made a " + e.getMessage());
         }
     }// end of method
 
@@ -42,8 +42,8 @@ public class Revision { //Class
                 String data = Reader.nextLine(); // Import scanner to variable
                 System.out.println(data); // Print output
             }
-        } catch (FileNotFoundException e) { // Catches problems
-            e.printStackTrace();
+        } catch (FileNotFoundException e) { // Checked exception (User caused)
+            System.err.println(e.getMessage());
         }
     }// end of method
 

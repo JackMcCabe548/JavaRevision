@@ -1,4 +1,5 @@
 public class THREADDDD implements Runnable {
+
     private String name;
     private int time;
 
@@ -8,13 +9,12 @@ public class THREADDDD implements Runnable {
     }
     public void run() { // Runnable method
         try {
-            System.out.println("The Thread metadata " + " Name: " + name + " Runtime: " + time);
+            System.out.println("The Thread metadata " + " Name: " + name + " Sleep time: " + time);
+
             Thread.sleep(time); // Send Thread to sleep when constructor input time has ended
         }
         catch(Exception e){
-            System.out.println(e);
+            System.out.println(e.getMessage());
         }
-
     }
-
 }

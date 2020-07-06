@@ -3,6 +3,10 @@ public class HQ {
 
     public static void main (String [] args) {
 
+        Test1 TTT = new Test1();
+        //TTT.Zusammen();
+        //TTT.montag();
+
         // Revision
             Revision a = new Revision(); // Constructor with zero arguments
             a.Searching();
@@ -40,8 +44,8 @@ public class HQ {
             Thread T1 = new Thread(new THREADDDD("Timer", 100)); // Creates object of Thread
             Thread T2 = new Thread(new THREADDDD("Timer 2", 99)); // Creates object of Thread (Second item finishes first)
 
-            T1.start();
-            T2.start();
+            T1.start(); //Method to invoke thread
+            T2.start(); //Method to invoke thread
 
         System.out.println(); // Spacing
 
