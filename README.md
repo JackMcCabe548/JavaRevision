@@ -10,7 +10,8 @@ Topics to learn:
 -Constructors (Done)
 -Stacks
 -Getters and setters methods (Done)
--Recursion (Done) ans * methodName (ans-1
-)
+-Recursion (Done) ans * methodName (ans-1)
 -ArrayLists (Done)
 -Linked lists
+-Threads
+-Interfaces

@@ -1,18 +1,31 @@
-public class CPU implements Runnable, CollectedData {
+import java.util.Random;
 
-    CollectedData ref; // Reference object
+public class CPU implements Runnable { // Implemented Interfaces
 
-    CPU(CollectedData f) { // Constructor
-        f = this.ref;
+    private int num;
+    private String Name;
+    Random r = new Random();
+
+
+    CPU(int NewNum, String NewName) { // Constructor
+        this.Name = NewName;
+        this.num = NewNum;
     }
 
     @Override
     public void run() {
-        ref.P
+        int Ran = 1+r.nextInt(100);
+        try {
+            for (int i = 1; i < num+1; i++) {
+                System.out.println(Name + "\t" + i);
+                Thread.sleep(Ran);
+            }
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
-    @Override
-    public void Data() {
-        System.out.println("Allen");
-    }
+
+
 }

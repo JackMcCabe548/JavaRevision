@@ -1,3 +1,6 @@
+import java.awt.*;
+import java.util.Collections;
+import java.util.LinkedList;
 
 public class HQ {
 
@@ -41,8 +44,8 @@ public class HQ {
             System.out.println();
 
          //THREADDDD
-            Thread T1 = new Thread(new THREADDDD("Timer", 100)); // Creates object of Thread
-            Thread T2 = new Thread(new THREADDDD("Timer 2", 99)); // Creates object of Thread (Second item finishes first)
+            Thread T1 = new Thread(new THREADDDD("Timer", 1)); // Creates object of Thread
+            Thread T2 = new Thread(new THREADDDD("Timer 2", 34)); // Creates object of Thread (Second item finishes first)
 
             T1.start(); //Method to invoke thread
             T2.start(); //Method to invoke thread
@@ -55,14 +58,11 @@ public class HQ {
         CollectedData A = new FirstName(); // Object of subclass
         CollectedData B = new LastName(); // Object of subclass
 
+
         Z.Creator(A);
         Z.Creator(B);
         System.out.println("Values are: ");
         Z.UserProfile(); // Print method
-        System.out.println(); // Spacing
-
-
-        System.out.println(anus(5)); // Call and print method
 
         System.out.println(); // Spacing
 
@@ -73,7 +73,14 @@ public class HQ {
             System.out.println("The numbers are " + x);
         }
 
-        
+        System.out.println(); // Spacing
+
+        Thread C1 = new Thread(new CPU(10, "Test"));
+        C1.start();
+
+        System.out.println(); // Spacing
+
+        System.out.println(anus(5)); // Call and print method
     }
 
     public static long anus (long ans){ // Recursion method

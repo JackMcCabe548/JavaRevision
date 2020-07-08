@@ -5,4 +5,9 @@ public class LastName implements CollectedData {
         System.out.println("McCabe");
     }
 
+    @Override
+    public void Printer(int size, String Name) {
+
+    }
+
 }
