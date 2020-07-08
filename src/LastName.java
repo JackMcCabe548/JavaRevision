@@ -1,6 +1,7 @@
-public class LastName extends FirstName { // Inheritance
+public class LastName implements CollectedData {
 
-    public void Data(){ // Overridden method
+    @Override
+    public void Data() {
         System.out.println("McCabe");
     }
 

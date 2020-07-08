@@ -3,18 +3,22 @@ public class HQ {
 
     public static void main (String [] args) {
 
+        Test1 TTT = new Test1();
+        //TTT.Zusammen();
+        //TTT.montag();
+
         // Revision
             Revision a = new Revision(); // Constructor with zero arguments
             a.Searching();
-            a.Making("RANDOM SHIT");
+            a.Making("RANDOM SHIT"); // Argument is the File Name
             a.Reading();
             a.Attributes();
 
             System.out.println(); // Makes space
 
         // RevisionTwo
-            RevisionTwo AA = new RevisionTwo("USER1"); // Calls constructor with one argument
-            RevisionTwo BB = new RevisionTwo("USER2"); // Calls constructor with one argument
+            RevisionTwo AA = new RevisionTwo("JACK"); // Calls constructor with one argument
+            RevisionTwo BB = new RevisionTwo("JOHN"); // Calls constructor with one argument
 
             System.out.println(); // Makes space
 
@@ -27,35 +31,57 @@ public class HQ {
 
             System.out.println();
 
+            R.Test();
+
+            System.out.println();
+
          // Cookie
             Cookie Cook = new Cookie(67);
 
             System.out.println();
 
+         //THREADDDD
+            Thread T1 = new Thread(new THREADDDD("Timer", 100)); // Creates object of Thread
+            Thread T2 = new Thread(new THREADDDD("Timer 2", 99)); // Creates object of Thread (Second item finishes first)
+
+            T1.start(); //Method to invoke thread
+            T2.start(); //Method to invoke thread
+
+        System.out.println(); // Spacing
+
         // POLYMORPHIC ARGUMENTS //
-            Assembler obj = new Assembler(); // Class with method that takes superclass object
+        CollectorClass Z = new CollectorClass();
 
-            Super B = new FirstName(); // Subclass of Super
-            FirstName C = new LastName(); // Subclass of FirstName
+        CollectedData A = new FirstName(); // Object of subclass
+        CollectedData B = new LastName(); // Object of subclass
 
-            obj.Add(B); // add object of class to array
-            obj.Add(C); // add object of class to array
+        Z.Creator(A);
+        Z.Creator(B);
+        System.out.println("Values are: ");
+        Z.UserProfile(); // Print method
+        System.out.println(); // Spacing
 
-            System.out.println();
-            obj.asList();
-            System.out.println();
 
-            HQ g = new HQ();
-            System.out.println(g.anus(7));
+        System.out.println(anus(5)); // Call and print method
 
+        System.out.println(); // Spacing
+
+        for (int x = 0; x < 5; x++) {
+            if (x == 3){
+                continue; // Skips integer 5
+            }
+            System.out.println("The numbers are " + x);
+        }
+
+        
     }
 
-    public long anus (long ans){ // recusrion method
+    public static long anus (long ans){ // Recursion method
             if (ans <= 1) {
                     return 1;
             }
             else
-                    return ans* anus(ans-1);
+                    return ans * anus(ans-1); // Recursion calls its own method
     }
 
 }
